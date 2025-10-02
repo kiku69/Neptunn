@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News | War of Neptunn</title>
+  <link rel="stylesheet" href="css/news.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="map.html">Map</a></li>
+      <li><a href="meduaarid.html">Meduars</a></li>
+      <li><a href="thaloorid.html">Theloarians</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="#">Game</a></li>
+    </ul>
+  </nav>
+  <div class="content-wrapper">
+    <!-- Newspaper Header -->
+    <header class="newspaper-header">
+      <h1 class="newspaper-title">The Neptunn Herald</h1>
+      <p class="newspaper-subtitle">Special War Dispatch – Revelation Edition</p>
+      <div class="header-divider"></div>
+    </header>
+    <!-- News Grid -->
+    <div class="news-grid">
+      <!-- Article 1 -->
+      <article class="news-card" data-article="1">
+        <div class="news-card-header">
+          <span class="news-tag breaking">BREAKING</span>
+          <h2 class="news-title">Thaloor Forces Hold Neptunn's First Captured City</h2>
+        </div>
+        <p class="news-preview">The Thaloor banner still flies above the coastal stronghold, a week after their sudden invasion...</p>
+        <button class="read-more-btn">Read Full Story</button>
+      </article>
+      <!-- Article 2 -->
+      <article class="news-card" data-article="2">
+        <div class="news-card-header">
+          <span class="news-tag urgent">URGENT</span>
+          <h2 class="news-title">Neptunn Resistance Launches Night Raids</h2>
+        </div>
+        <p class="news-preview">Militias in the hills struck supply caravans bound for the occupied zone...</p>
+        <button class="read-more-btn">Read Full Story</button>
+      </article>
+      <!-- Article 3 -->
+      <article class="news-card" data-article="3">
+        <div class="news-card-header">
+          <span class="news-tag alert">ALERT</span>
+          <h2 class="news-title">Protests Boil Over in Neptunn Capital</h2>
+        </div>
+        <p class="news-preview">Crowds demand government action. "We are being invaded, and they call themselves victims!"...</p>
+        <button class="read-more-btn">Read Full Story</button>
+      </article>
+      <!-- Article 4 -->
+      <article class="news-card" data-article="4">
+        <div class="news-card-header">
+          <span class="news-tag update">UPDATE</span>
+          <h2 class="news-title">Meduar Envoys Repeat Denials</h2>
+        </div>
+        <p class="news-preview">Meduar leaders maintain they never stole the crystal, insisting the war is built on lies...</p>
+        <button class="read-more-btn">Read Full Story</button>
+      </article>
+      <!-- Article 5 -->
+      <article class="news-card" data-article="5">
+        <div class="news-card-header">
+          <span class="news-tag breaking">BREAKING</span>
+          <h2 class="news-title">Akashic Records Reveal Ancient Theft</h2>
+        </div>
+        <p class="news-preview">Scholars consulting the timeless Akashic Records uncovered a startling truth...</p>
+        <button class="read-more-btn">Read Full Story</button>
+      </article>
+      <!-- Article 6 -->
+      <article class="news-card" data-article="6">
+        <div class="news-card-header">
+          <span class="news-tag breaking">BREAKING</span>
+          <h2 class="news-title">Truth Rocks the Realms</h2>
+        </div>
+        <p class="news-preview">This revelation casts the Thaloor invasion in a new light...</p>
+        <button class="read-more-btn">Read Full Story</button>
+      </article>
+      <!-- Article 7 -->
+      <article class="news-card" data-article="7">
+        <div class="news-card-header">
+          <span class="news-tag urgent">URGENT</span>
+          <h2 class="news-title">Thaloor Leaders Silent After Revelation</h2>
+        </div>
+        <p class="news-preview">When pressed about the records, Thaloor commanders gave no comment...</p>
+        <button class="read-more-btn">Read Full Story</button>
+      </article>
+    </div>
+  </div>
+  <!-- Modal Popup -->
+  <div id="articleModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div class="modal-header">
+        <span id="modalTag" class="news-tag"></span>
+        <h2 id="modalTitle" class="modal-title"></h2>
+      </div>
+      <div class="modal-divider"></div>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+  <script src="js/news.js"></script>
+</body>
+</html>

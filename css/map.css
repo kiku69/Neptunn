@@ -13,7 +13,7 @@ body, html {
   background: linear-gradient(to right, #0B0B2D, #121245);
   display: flex;
   justify-content: center;
-  border-bottom: 2px solid rgb(75, 208, 232);
+  border-bottom: 2px solid rgb(98, 216, 232);
   position: relative;
   z-index: 10;
 }
@@ -55,7 +55,7 @@ body, html {
   position: absolute;
   width: 24px;
   height: 24px;
-  background-color: rgba(112, 203, 255, 0.85);
+  background-color: rgba(0, 162, 255, 0.85);
   border-radius: 50%;
   cursor: pointer;
   border: 2px solid white;
