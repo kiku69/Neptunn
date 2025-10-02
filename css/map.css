@@ -1,0 +1,101 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel', serif;
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+
+.navbar {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #0B0B2D, #121245);
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid rgb(75, 208, 232);
+  position: relative;
+  z-index: 10;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav-links li a:hover {
+  color: gold;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
+  overflow: hidden;
+}
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#pins-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.pin {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(112, 203, 255, 0.85);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+.pin:hover {
+  transform: scale(1.3) translate(-50%, -50%);
+}
+
+.info-box {
+  position: absolute;
+  background-color: rgba(0,0,0,0.85);
+  color: white;
+  padding: 1rem;
+  border: 1px solid gold;
+  border-radius: 6px;
+  pointer-events: none;
+  min-width: 200px;
+  z-index: 5;
+}
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .map-container {
+    height: calc(100vh - 120px);
+  }
+  .pin {
+    width: 18px;
+    height: 18px;
+  }
+  .info-box {
+    font-size: 0.9rem;
+    min-width: 160px;
+  }
+}
