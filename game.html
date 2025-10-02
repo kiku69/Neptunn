@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Battle Arena | War of Neptunn</title>
+  <link rel="stylesheet" href="css/game.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="map.html">Map</a></li>
+      <li><a href="meduaarid.html">Meduars</a></li>
+      <li><a href="thaloorid.html">Theloarians</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="game.html">Game</a></li>
+    </ul>
+  </nav>
+  <div class="game-container">
+    <!-- Game Start Screen -->
+    <div id="startScreen" class="screen active">
+      <div class="start-content">
+        <h1 class="game-title">War of Neptunn</h1>
+        <p class="game-subtitle">Battle for the Life Crystal</p>
+        <div class="faction-selection">
+          <div class="faction-card theloarian" data-faction="theloarian">
+            <div class="faction-image"></div>
+            <h2>Theloarians</h2>
+            <p>Masters of earth and energy. Guardians seeking to reclaim Astra's heart.</p>
+            <div class="faction-stats">
+              <span>:crossed_swords: Attack: 7</span>
+              <span>:shield: Defense: 8</span>
+              <span>:sparkles: Energy: 6</span>
+            </div>
+          </div>
+          <div class="faction-card meduar" data-faction="meduar">
+            <div class="faction-image"></div>
+            <h2>Meduars</h2>
+            <p>Shadow manipulators. Possessors of the stolen Life Crystal.</p>
+            <div class="faction-stats">
+              <span>:crossed_swords: Attack: 8</span>
+              <span>:shield: Defense: 6</span>
+              <span>:sparkles: Energy: 7</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Character Selection Screen -->
+    <div id="characterScreen" class="screen">
+      <div class="character-selection">
+        <h2 class="selection-title">Choose Your Champion</h2>
+        <div id="characterGrid" class="character-grid"></div>
+        <button id="confirmCharacter" class="btn-primary" disabled>Enter Battle</button>
+      </div>
+    </div>
+    <!-- Battle Screen -->
+    <div id="battleScreen" class="screen">
+      <div class="battle-arena">
+        <!-- Battle Header -->
+        <div class="battle-header">
+          <div class="round-info">
+            <h3>Round <span id="roundNumber">1</span></h3>
+          </div>
+        </div>
+        <!-- Battle Field -->
+        <div class="battle-field">
+          <!-- Player Side -->
+          <div class="combatant player-side">
+            <div class="character-portrait" id="playerPortrait"></div>
+            <div class="character-stats">
+              <h3 id="playerName">Player</h3>
+              <div class="health-bar">
+                <div class="health-fill" id="playerHealth"></div>
+                <span class="health-text" id="playerHealthText">100/100</span>
+              </div>
+              <div class="energy-bar">
+                <div class="energy-fill" id="playerEnergy"></div>
+                <span class="energy-text" id="playerEnergyText">50/50</span>
+              </div>
+              <div class="status-effects" id="playerStatus"></div>
+            </div>
+          </div>
+          <!-- VS Indicator -->
+          <div class="vs-indicator">
+            <span>VS</span>
+          </div>
+          <!-- Enemy Side -->
+          <div class="combatant enemy-side">
+            <div class="character-portrait" id="enemyPortrait"></div>
+            <div class="character-stats">
+              <h3 id="enemyName">Enemy</h3>
+              <div class="health-bar">
+                <div class="health-fill" id="enemyHealth"></div>
+                <span class="health-text" id="enemyHealthText">100/100</span>
+              </div>
+              <div class="energy-bar">
+                <div class="energy-fill" id="enemyEnergy"></div>
+                <span class="energy-text" id="enemyEnergyText">50/50</span>
+              </div>
+              <div class="status-effects" id="enemyStatus"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Battle Log -->
+        <div class="battle-log">
+          <div id="battleMessages"></div>
+        </div>
+        <!-- Action Panel -->
+        <div class="action-panel">
+          <button class="action-btn attack-btn" data-action="attack">
+            <span class="action-icon">:crossed_swords:</span>
+            <span>Attack</span>
+            <span class="action-cost">10 Energy</span>
+          </button>
+          <button class="action-btn special-btn" data-action="special">
+            <span class="action-icon">:sparkles:</span>
+            <span>Special Ability</span>
+            <span class="action-cost">25 Energy</span>
+          </button>
+          <button class="action-btn defend-btn" data-action="defend">
+            <span class="action-icon">:shield:</span>
+            <span>Defend</span>
+            <span class="action-cost">5 Energy</span>
+          </button>
+          <button class="action-btn heal-btn" data-action="heal">
+            <span class="action-icon">:green_heart:</span>
+            <span>Heal</span>
+            <span class="action-cost">20 Energy</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Victory Screen -->
+    <div id="victoryScreen" class="screen">
+      <div class="result-content">
+        <h1 class="result-title" id="resultTitle">Victory!</h1>
+        <p class="result-message" id="resultMessage"></p>
+        <div class="result-stats" id="resultStats"></div>
+        <button id="playAgain" class="btn-primary">Play Again</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/game.js"></script>
+</body>
+</html>
