@@ -7,7 +7,6 @@ body, html {
   background: radial-gradient(ellipse at center, #1A1A3E 0%, #0A0A1E 100%);
   color: white;
 }
-/* Navbar */
 .navbar {
   width: 100%;
   padding: 1rem 2rem;
@@ -35,7 +34,6 @@ body, html {
 .nav-links li a:hover {
   color: gold;
 }
-/* Game Container */
 .game-container {
   min-height: calc(100vh - 80px);
   padding: 2rem;
@@ -59,7 +57,6 @@ body, html {
     transform: translateY(0);
   }
 }
-/* Start Screen */
 .start-content {
   max-width: 1400px;
   margin: 0 auto;
@@ -89,7 +86,6 @@ body, html {
   margin-bottom: 3rem;
   letter-spacing: 2px;
 }
-/* Faction Selection */
 .faction-selection {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -156,7 +152,6 @@ body, html {
   font-weight: 600;
   color: #FFD700;
 }
-/* Character Selection */
 .character-selection {
   max-width: 1400px;
   margin: 0 auto;

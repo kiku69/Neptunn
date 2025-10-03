@@ -1,0 +1,121 @@
+.navbar {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #0B0B2D, #121245);
+  display: flex;
+  justify-content: space-between;  /* Changed back to space-between */
+  align-items: center;
+  border-bottom: 2px solid rgb(98, 216, 232);
+  position: relative;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Added to center links */
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: gold;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: 1rem;
+  z-index: 100;
+}
+
+.hamburger {
+  width: 30px;
+  height: 3px;
+  background: white;
+  position: relative;
+  transition: all 0.3s;
+  display: block;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s;
+  left: 0;
+}
+
+.hamburger::before {
+  transform: translateY(-10px);
+}
+
+.hamburger::after {
+  transform: translateY(10px);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+
+  .navbar-toggle {
+    display: block;
+    margin-right: 10px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background: linear-gradient(to right, #0B0B2D, #121245);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: right 0.3s ease;
+    z-index: 90;
+    padding: 2rem;
+    margin: 0; /* Reset margin for mobile */
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .hamburger.active {
+    background: transparent;
+  }
+
+  .hamburger.active::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .hamburger.active::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+}

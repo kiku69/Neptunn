@@ -5,19 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Battle Arena | War of Neptunn</title>
   <link rel="stylesheet" href="css/game.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- NAVBAR -->
   <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="map.html">Map</a></li>
-      <li><a href="meduaarid.html">Meduars</a></li>
-      <li><a href="thaloorid.html">Theloarians</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="game.html">Game</a></li>
-    </ul>
-  </nav>
+        <button class="navbar-toggle" id="navbarToggle">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="map.html">Map</a></li>
+            <li><a href="meduaarid.html">Meduars</a></li>
+            <li><a href="thaloorid.html">Theloarians</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="game.html">Game</a></li>
+        </ul>
+    </nav>
   <div class="game-container">
     <!-- Game Start Screen -->
     <div id="startScreen" class="screen active">
@@ -144,5 +148,6 @@
     </div>
   </div>
   <script src="js/game.js"></script>
+  <script src="js/navbar.js"></script>
 </body>
 </html>

@@ -5,21 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Theloarians | War of Neptunn</title>
   <link rel="stylesheet" href="css/thaloorid.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- NAVBAR -->
   <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="map.html">Map</a></li>
-      <li><a href="meduaarid.html">Meduars</a></li>
-      <li><a href="thaloorid.html">Theloarians</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="game.html">Game</a></li>
-    </ul>
-  </nav>
+        <button class="navbar-toggle" id="navbarToggle">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="map.html">Map</a></li>
+            <li><a href="meduaarid.html">Meduars</a></li>
+            <li><a href="thaloorid.html">Theloarians</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="game.html">Game</a></li>
+        </ul>
+    </nav>
   <div class="content-wrapper">
-    <!-- Species Description -->
     <section class="species-intro">
       <h1 class="species-title">The Theloarians</h1>
       <div class="species-description">
@@ -39,11 +41,9 @@
         </div>
       </div>
     </section>
-    <!-- Characters Grid -->
     <section class="characters-section">
       <h2 class="section-title">The Champions</h2>
       <div class="characters-grid">
-        <!-- Eryon Guard -->
         <div class="character-card">
           <img src="assets/images/guard.png" alt="Eryon Guard" class="character-image">
           <div class="character-info">
@@ -55,7 +55,6 @@
             </ul>
           </div>
         </div>
-        <!-- Kaelthor Warrior -->
         <div class="character-card">
           <img src="assets/images/ffeca577-6c8f-48aa-a6a3-62c0b809e0ca_720_1.png" alt="Kaelthor Warrior" class="character-image">
           <div class="character-info">
@@ -67,7 +66,6 @@
             </ul>
           </div>
         </div>
-        <!-- Iorath Shaman -->
         <div class="character-card">
           <img src="assets/images/shamaan.png" alt="Iorath Shaman" class="character-image">
           <div class="character-info">
@@ -94,5 +92,7 @@
       </div>
     </section>
   </div>
+  <script src="js/thaloorid.js"></script>
+  <script src="js/navbar.js"></script>
 </body>
 </html>

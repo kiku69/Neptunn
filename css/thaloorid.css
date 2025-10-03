@@ -8,33 +8,7 @@ body, html {
   background-size: cover;
   background-color: #8B7355;
 }
-.navbar {
-  width: 100%;
-  padding: 1rem 2rem;
-  background: linear-gradient(to right, #0B0B2D, #121245);
-  display: flex;
-  justify-content: center;
-  border-bottom: 2px solid rgb(98, 216, 232);
-  position: relative;
-  z-index: 10;
-}
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-.nav-links li a:hover {
-  color: gold;
-}
+
 .content-wrapper {
   min-height: calc(100vh - 80px);
   padding: 2rem;
