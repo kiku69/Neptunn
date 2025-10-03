@@ -83,8 +83,8 @@ const characters = {
   ],
   meduar: [
     {
-      id: 'zyphara',
-      name: 'Zyphara',
+      id: 'draven xyros',
+      name: 'Draven Xyros',
       role: 'Shadow Assassin',
       faction: 'meduar',
       maxHealth: 95,
@@ -99,8 +99,8 @@ const characters = {
       }
     },
     {
-      id: 'morbane',
-      name: 'Morbane',
+      id: 'nyx arelith',
+      name: 'Nyx Arelith',
       role: 'Dark Sorcerer',
       faction: 'meduar',
       maxHealth: 85,
@@ -116,8 +116,8 @@ const characters = {
       }
     },
     {
-      id: 'vexora',
-      name: 'Vexora',
+      id: 'seraphine veyra',
+      name: 'Seraphine Veyra',
       role: 'Mind Controller',
       faction: 'meduar',
       maxHealth: 100,
@@ -132,8 +132,8 @@ const characters = {
       }
     },
     {
-      id: 'krellus',
-      name: 'Krellus',
+      id: 'kael voruun',
+      name: 'Kael Voruun',
       role: 'Void Knight',
       faction: 'meduar',
       maxHealth: 115,
