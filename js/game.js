@@ -428,16 +428,6 @@ function performAction(action) {
 
     updateBattleUI();
 
-<<<<<<< Updated upstream
-  if (gameState.enemy.currentHealth <= 0) {
-    setTimeout(() => endBattle(true), 1000);
-    return;
-  }
-
-  setTimeout(() => {
-    enemyTurn();
-  }, 1500);
-=======
     // Kontrolli, kas vaenlane langes
     if (gameState.enemy.currentHealth <= 0) {
         setTimeout(() => endBattle(true), 1000);
@@ -448,7 +438,6 @@ function performAction(action) {
     setTimeout(() => {
         enemyTurn();
     }, 1500);
->>>>>>> Stashed changes
 }
 
 function performAttack(attacker, defender, isEnemy) {
