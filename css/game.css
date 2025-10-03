@@ -39,6 +39,47 @@ body, html {
   padding: 2rem;
   position: relative;
 }
+.character-image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.character-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.character-option:hover .character-image {
+  border-color: #FFD700;
+}
+
+.character-option:hover .character-image img {
+  transform: scale(1.1);
+}
+
+.character-option.selected .character-image {
+  border-color: #FFD700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.character-portrait {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.special-desc {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
 /* Screen Management */
 .screen {
   display: none;
@@ -516,4 +557,11 @@ body, html {
   .result-title {
     font-size: 2.5rem;
   }
+
+  #playerPortrait, #enemyPortrait {
+  width: 150px;       /* or whatever */
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
 }

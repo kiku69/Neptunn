@@ -18,6 +18,8 @@ const characters = {
       name: 'Eryon',
       role: 'Guard',
       faction: 'theloarian',
+      image: '../assets/images/guard.png',
+
       maxHealth: 120,
       maxEnergy: 50,
       attack: 15,
@@ -35,6 +37,8 @@ const characters = {
       name: 'Kaelthor',
       role: 'Warrior',
       faction: 'theloarian',
+      image: '../assets/images/thor.png',
+
       maxHealth: 100,
       maxEnergy: 45,
       attack: 25,
@@ -51,6 +55,8 @@ const characters = {
       name: 'Iorath',
       role: 'Shaman',
       faction: 'theloarian',
+      image: '../assets/images/shamaan.png',
+
       maxHealth: 90,
       maxEnergy: 60,
       attack: 18,
@@ -68,6 +74,8 @@ const characters = {
       name: 'Lyrri-Ja',
       role: 'Healer',
       faction: 'theloarian',
+      image: '../assets/images/healer.png',
+
       maxHealth: 110,
       maxEnergy: 55,
       attack: 12,
@@ -87,6 +95,8 @@ const characters = {
       name: 'Draven Xyros',
       role: 'Shadow Assassin',
       faction: 'meduar',
+      image: '../assets/images/spy.png',
+
       maxHealth: 95,
       maxEnergy: 50,
       attack: 28,
@@ -103,6 +113,8 @@ const characters = {
       name: 'Nyx Arelith',
       role: 'Dark Sorcerer',
       faction: 'meduar',
+      image: '../assets/images/nyx.png',
+
       maxHealth: 85,
       maxEnergy: 65,
       attack: 22,
@@ -120,6 +132,8 @@ const characters = {
       name: 'Seraphine Veyra',
       role: 'Mind Controller',
       faction: 'meduar',
+      image: '../assets/images/sera.png',
+
       maxHealth: 100,
       maxEnergy: 55,
       attack: 20,
@@ -136,6 +150,8 @@ const characters = {
       name: 'Kael Voruun',
       role: 'Void Knight',
       faction: 'meduar',
+      image: '../assets/images/kael.png',
+
       maxHealth: 115,
       maxEnergy: 48,
       attack: 24,
@@ -150,6 +166,64 @@ const characters = {
     }
   ]
 };
+
+function loadCharacters(faction) {
+  const grid = document.getElementById('characterGrid');
+  grid.innerHTML = '';
+
+  const factionChars = characters[faction];
+  factionChars.forEach(char => {
+    const charCard = document.createElement('div');
+    charCard.className = 'character-option';
+    charCard.dataset.charId = char.id;
+    charCard.innerHTML = `
+      <pre>
+        <code>${char}</code>
+      </pre>
+      <div class="character-image">
+        <img src="${char.image}" alt="${char.name}">
+      </div>
+      <h3>${char.name}</h3>
+      <div class="role">${char.role}</div>
+      <div class="abilities">
+        <p><strong>HP:</strong> ${char.maxHealth} | <strong>Energy:</strong> ${char.maxEnergy}</p>
+        <p><strong>Attack:</strong> ${char.attack} | <strong>Defense:</strong> ${char.defense}</p>
+        <p><strong>Special:</strong> ${char.special.name}</p>
+        <p class="special-desc">${char?.special.description}</p>
+      </div>
+    `;
+    charCard.addEventListener('click', () => selectCharacter(char, charCard));
+    grid.appendChild(charCard);
+  });
+}
+
+// Update the updateBattleUI function
+function updateBattleUI() {
+  // Round
+  document.getElementById('roundNumber').textContent = gameState.round;
+
+  // Player portrait and stats
+  const playerPortrait = document.getElementById('playerPortrait');
+  playerPortrait.style.backgroundImage = `url(${gameState.player.image})`;
+  document.getElementById('playerName').textContent = gameState.player.name;
+  updateHealthBar('player', gameState.player.currentHealth, gameState.player.maxHealth);
+  updateEnergyBar('player', gameState.player.currentEnergy, gameState.player.maxEnergy);
+  updateStatusEffects('player', gameState.player.statusEffects);
+  console.log(gameState.player.image);
+
+  // Enemy portrait and stats
+  const enemyPortrait = document.getElementById('enemyPortrait');
+  enemyPortrait.style.backgroundImage = `url('${gameState.enemy.image}')`;
+  document.getElementById('enemyName').textContent = gameState.enemy.name;
+  updateHealthBar('enemy', gameState.enemy.currentHealth, gameState.enemy.maxHealth);
+  updateEnergyBar('enemy', gameState.enemy.currentEnergy, gameState.enemy.maxEnergy);
+  updateStatusEffects('enemy', gameState.enemy.statusEffects);
+
+  // Action buttons
+  updateActionButtons();
+}
+
+
 
 // --- Initsialiseeri mäng ---
 function initGame() {
@@ -209,6 +283,9 @@ function loadCharacters(faction) {
     charCard.className = 'character-option';
     charCard.dataset.charId = char.id;
     charCard.innerHTML = `
+      <div class="character-image">
+        <img src="${char.image}" alt="${char.name}" onerror="this.src='images/characters/placeholder.png'">
+      </div>
       <h3>${char.name}</h3>
       <div class="role">${char.role}</div>
       <div class="abilities">
