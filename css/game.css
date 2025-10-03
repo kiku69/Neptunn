@@ -183,15 +183,17 @@ body, html {
   height: 250px;
   border-radius: 15px;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .faction-card.theloarian .faction-image {
-  background: linear-gradient(135deg, #8B7355, #654321);
+  background-image: url('../assets/images/bg2.png');
 }
 
 .faction-card.meduar .faction-image {
-  background: linear-gradient(135deg, #4B0082, #2C0052);
+  background-image: url('../assets/images/bg1.png');
 }
 
 .faction-card h2 {
