@@ -151,7 +151,7 @@ body, html {
   font-size: 0.95rem;
   line-height: 1.8;
   font-weight: 400;
-  margin: 0;
+  margin: 0 0 1.5rem 0;
 }
 .character-description li {
   margin-bottom: 0.8rem;
@@ -160,6 +160,75 @@ ul {
   padding-left: 1.2rem;
   margin: 0;
 }
+
+/* Voice Button Styles */
+.voice-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, rgba(98, 216, 232, 0.2), rgba(98, 216, 232, 0.1));
+  border: 2px solid rgb(98, 216, 232);
+  border-radius: 30px;
+  color: rgb(98, 216, 232);
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(98, 216, 232, 0.2);
+  text-shadow: 0 0 5px rgba(98, 216, 232, 0.3);
+}
+
+.voice-btn:hover {
+  background: linear-gradient(135deg, rgba(98, 216, 232, 0.3), rgba(98, 216, 232, 0.2));
+  border-color: rgb(255, 215, 0);
+  color: rgb(255, 215, 0);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(98, 216, 232, 0.4), 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.voice-btn:active {
+  transform: translateY(0);
+}
+
+.voice-btn.playing {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(255, 215, 0, 0.2));
+  border-color: rgb(255, 215, 0);
+  color: rgb(255, 215, 0);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.4);
+  }
+}
+
+.voice-icon {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.5;
+}
+
+.voice-btn.playing .voice-icon {
+  animation: soundWave 0.8s ease-in-out infinite;
+}
+
+@keyframes soundWave {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .species-description {
@@ -208,5 +277,15 @@ ul {
   }
   .character-description {
     font-size: 0.9rem;
+  }
+  
+  .voice-btn {
+    padding: 0.65rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  
+  .voice-icon {
+    width: 18px;
+    height: 18px;
   }
 }

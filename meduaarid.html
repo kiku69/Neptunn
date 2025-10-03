@@ -11,17 +11,17 @@
 <body>
   <!-- NAVBAR -->
   <nav class="navbar">
-        <button class="navbar-toggle" id="navbarToggle">
-            <span class="hamburger"></span>
-        </button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="map.html">Map</a></li>
-            <li><a href="meduaarid.html">Meduars</a></li>
-            <li><a href="thaloorid.html">Theloarians</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="game.html">Game</a></li>
-        </ul>
-    </nav>
+    <div class="nav-container">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="map.html">Map</a></li>
+        <li><a href="meduaarid.html">Meduars</a></li>
+        <li><a href="thaloorid.html">Theloarians</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="game.html">Game</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <div class="content-wrapper">
     <!-- Species Description -->
     <section class="species-intro">
@@ -49,6 +49,7 @@
         </div>
       </div>
     </section>
+
     <!-- Characters Grid -->
     <section class="characters-section">
       <h2 class="section-title">The Elite</h2>
@@ -63,8 +64,17 @@
               <li>Smart, charismatic. Her word is law. Can read her enemies like they're an open book.</li>
               <li>Special abilities: Telepathy. Can bind all the minds in her team into one for better tactics.</li>
             </ul>
+            <button class="voice-btn" data-audio="audio/seraphine.mp3">
+              <svg class="voice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              </svg>
+              <span class="voice-text">Play Voice</span>
+            </button>
           </div>
         </div>
+
         <!-- Kael Voruun -->
         <div class="character-card">
           <img src="assets/images/kael.png" alt="Kael Voruun" class="character-image">
@@ -75,8 +85,17 @@
               <li>Loyal, quiet. Always ready to sacrifice himself for his team.</li>
               <li>Special ability: Physical strength combined with lightning-fast reflexes make him move faster than eye can see.</li>
             </ul>
+            <button class="voice-btn" data-audio="audio/kael.mp3">
+              <svg class="voice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              </svg>
+              <span class="voice-text">Play Voice</span>
+            </button>
           </div>
         </div>
+
         <!-- Nyx Arelith -->
         <div class="character-card">
           <img src="assets/images/nyx.png" alt="Nyx Arelith" class="character-image">
@@ -87,8 +106,17 @@
               <li>Silent, deeply analytical. Can solve even the most difficult of problems in seconds</li>
               <li>Ability: A quantum computing-like brain – it can process billions of data points at once and predict your opponent's next move.</li>
             </ul>
+            <button class="voice-btn" data-audio="audio/nyx.mp3">
+              <svg class="voice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              </svg>
+              <span class="voice-text">Play Voice</span>
+            </button>
           </div>
         </div>
+
         <!-- Draven Xyros -->
         <div class="character-card">
           <img src="assets/images/spy.png" alt="Draven Xyros" class="character-image">
@@ -99,11 +127,42 @@
               <li>Secretive, witty. Likes working in the shadows.</li>
               <li>Can turn invisible which makes him the perfect spy. Doesn't show up on a heat map.</li>
             </ul>
+            <button class="voice-btn" data-audio="audio/draven.mp3">
+              <svg class="voice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              </svg>
+              <span class="voice-text">Play Voice</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Veyrox Malakar -->
+        <div class="character-card">
+          <img src="assets/images/VGK.png" alt="Veyrox Malakar" class="character-image">
+          <div class="character-info">
+            <h2 class="character-name">Veyrox Malakar</h2>
+            <h3 class="character-role">Abomination Commander</h3>
+            <ul class="character-description">
+              <li>Cold, ruthless, and utterly calculating. He is obsessed with forbidden knowledge and believes only he deserves to lead the Meduars into a new empire.</li>
+              <li>Tri-Mind: His three heads allow him to process information in parallel, making his intelligence and reaction speed terrifying.</li>
+              <li>Crystal Channeling: The glowing crystals in his pockets are fragments of Neptunn's core, which he uses to amplify his telekinetic and destructive powers.</li>
+            </ul>
+            <button class="voice-btn" data-audio="audio/veyrox.mp3">
+              <svg class="voice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              </svg>
+              <span class="voice-text">Play Voice</span>
+            </button>
           </div>
         </div>
       </div>
     </section>
   </div>
   <script src="js/navbar.js"></script>
+  <script src="js/voice.js"></script>
 </body>
 </html>

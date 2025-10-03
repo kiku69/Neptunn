@@ -13,6 +13,7 @@ body, html {
   min-height: calc(100vh - 80px);
   padding: 2rem;
 }
+
 /* Species Introduction Section */
 .species-intro {
   max-width: 1400px;
@@ -23,6 +24,7 @@ body, html {
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
+
 .species-title {
   font-size: 3rem;
   font-weight: 600;
@@ -33,12 +35,14 @@ body, html {
   letter-spacing: 3px;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
 }
+
 .species-description {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
   color: white;
 }
+
 .desc-block h3 {
   font-size: 1.5rem;
   font-weight: 600;
@@ -48,21 +52,25 @@ body, html {
   letter-spacing: 1px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
+
 .desc-block p {
   font-size: 1rem;
   line-height: 1.8;
   margin: 0 0 1rem 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
+
 .desc-block p strong {
   color: #FFD700;
   font-weight: 600;
 }
+
 /* Characters Section */
 .characters-section {
   max-width: 1400px;
   margin: 0 auto;
 }
+
 .section-title {
   font-size: 2.5rem;
   font-weight: 600;
@@ -73,11 +81,13 @@ body, html {
   letter-spacing: 2px;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
 }
+
 .characters-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
 }
+
 .character-card {
   display: flex;
   align-items: center;
@@ -88,10 +98,12 @@ body, html {
   backdrop-filter: blur(5px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .character-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(255, 215, 0, 0.2);
 }
+
 .character-image {
   width: 280px;
   height: 380px;
@@ -100,11 +112,13 @@ body, html {
   flex-shrink: 0;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
+
 .character-info {
   flex: 1;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
+
 .character-name {
   font-size: 1.8rem;
   font-weight: 600;
@@ -113,6 +127,7 @@ body, html {
   text-transform: uppercase;
   color: #FFD700;
 }
+
 .character-role {
   font-size: 1rem;
   font-weight: 400;
@@ -121,19 +136,91 @@ body, html {
   letter-spacing: 1px;
   opacity: 0.95;
 }
+
 .character-description {
   font-size: 0.95rem;
   line-height: 1.8;
   font-weight: 400;
-  margin: 0;
+  margin: 0 0 1.5rem 0;
 }
+
 .character-description li {
   margin-bottom: 0.8rem;
 }
+
 ul {
   padding-left: 1.2rem;
   margin: 0;
 }
+
+/* Voice Button Styles - Theloarian Theme (Gold/Earth tones) */
+.voice-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.25), rgba(218, 165, 32, 0.15));
+  border: 2px solid #FFD700;
+  border-radius: 30px;
+  color: #FFD700;
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.25);
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+}
+
+.voice-btn:hover {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.35), rgba(218, 165, 32, 0.25));
+  border-color: #FFA500;
+  color: #FFA500;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4), 0 0 25px rgba(255, 165, 0, 0.3);
+}
+
+.voice-btn:active {
+  transform: translateY(0);
+}
+
+.voice-btn.playing {
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.4), rgba(255, 140, 0, 0.3));
+  border-color: #FFA500;
+  color: #FFA500;
+  animation: pulseGold 1.5s infinite;
+}
+
+@keyframes pulseGold {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(255, 165, 0, 0.7), 0 0 35px rgba(255, 140, 0, 0.5);
+  }
+}
+
+.voice-icon {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.5;
+}
+
+.voice-btn.playing .voice-icon {
+  animation: soundWave 0.8s ease-in-out infinite;
+}
+
+@keyframes soundWave {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .characters-grid {
@@ -141,43 +228,64 @@ ul {
     gap: 2rem;
   }
 }
+
 @media (max-width: 768px) {
   .nav-links {
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
   }
+  
   .species-intro {
     padding: 1.5rem;
   }
+  
   .species-title {
     font-size: 2rem;
   }
+  
   .desc-block h3 {
     font-size: 1.2rem;
   }
+  
   .desc-block p {
     font-size: 0.9rem;
   }
+  
   .section-title {
     font-size: 1.8rem;
   }
+  
   .character-card {
     flex-direction: column;
     text-align: center;
     padding: 1.5rem;
   }
+  
   .character-image {
     width: 220px;
     height: 300px;
   }
+  
   .character-name {
     font-size: 1.5rem;
   }
+  
   .character-role {
     font-size: 0.9rem;
   }
+  
   .character-description {
     font-size: 0.9rem;
+  }
+  
+  .voice-btn {
+    padding: 0.65rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  
+  .voice-icon {
+    width: 18px;
+    height: 18px;
   }
 }
