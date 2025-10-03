@@ -7,6 +7,7 @@ body, html {
   background: radial-gradient(ellipse at center, #1A1A3E 0%, #0A0A1E 100%);
   color: white;
 }
+
 .navbar {
   width: 100%;
   padding: 1rem 2rem;
@@ -17,6 +18,7 @@ body, html {
   position: relative;
   z-index: 10;
 }
+
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -24,6 +26,7 @@ body, html {
   margin: 0;
   padding: 0;
 }
+
 .nav-links li a {
   color: white;
   text-decoration: none;
@@ -31,14 +34,17 @@ body, html {
   font-weight: 600;
   transition: color 0.3s;
 }
+
 .nav-links li a:hover {
   color: gold;
 }
+
 .game-container {
   min-height: calc(100vh - 80px);
   padding: 2rem;
   position: relative;
 }
+
 .character-image {
   width: 120px;
   height: 120px;
@@ -47,6 +53,10 @@ body, html {
   overflow: hidden;
   border: 3px solid rgba(255, 215, 0, 0.3);
   transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .character-image img {
@@ -80,14 +90,16 @@ body, html {
   opacity: 0.8;
   margin-top: 0.5rem;
 }
-/* Screen Management */
+
 .screen {
   display: none;
   animation: fadeIn 0.5s ease;
 }
+
 .screen.active {
   display: block;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -98,11 +110,13 @@ body, html {
     transform: translateY(0);
   }
 }
+
 .start-content {
   max-width: 1400px;
   margin: 0 auto;
   text-align: center;
 }
+
 .game-title {
   font-size: 4rem;
   font-weight: 700;
@@ -113,6 +127,7 @@ body, html {
   text-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 3px 3px 10px rgba(0, 0, 0, 0.8);
   animation: pulse 3s ease-in-out infinite;
 }
+
 @keyframes pulse {
   0%, 100% {
     text-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 3px 3px 10px rgba(0, 0, 0, 0.8);
@@ -121,12 +136,14 @@ body, html {
     text-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 3px 3px 10px rgba(0, 0, 0, 0.8);
   }
 }
+
 .game-subtitle {
   font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 3rem;
   letter-spacing: 2px;
 }
+
 .faction-selection {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -134,6 +151,7 @@ body, html {
   max-width: 1000px;
   margin: 0 auto;
 }
+
 .faction-card {
   background: rgba(255, 255, 255, 0.05);
   border: 3px solid rgba(255, 255, 255, 0.2);
@@ -143,19 +161,23 @@ body, html {
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
+
 .faction-card:hover {
   transform: translateY(-10px) scale(1.02);
   border-color: #FFD700;
   box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3);
 }
+
 .faction-card.theloarian:hover {
   border-color: #8B7355;
   box-shadow: 0 20px 60px rgba(139, 115, 85, 0.4);
 }
+
 .faction-card.meduar:hover {
   border-color: #4B0082;
   box-shadow: 0 20px 60px rgba(75, 0, 130, 0.4);
 }
+
 .faction-image {
   width: 100%;
   height: 250px;
@@ -163,12 +185,15 @@ body, html {
   margin-bottom: 1.5rem;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
 }
+
 .faction-card.theloarian .faction-image {
   background: linear-gradient(135deg, #8B7355, #654321);
 }
+
 .faction-card.meduar .faction-image {
   background: linear-gradient(135deg, #4B0082, #2C0052);
 }
+
 .faction-card h2 {
   font-size: 2rem;
   color: #FFD700;
@@ -176,28 +201,33 @@ body, html {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
 .faction-card p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   color: rgba(255, 255, 255, 0.9);
 }
+
 .faction-stats {
   display: flex;
   justify-content: space-around;
   padding-top: 1rem;
   border-top: 2px solid rgba(255, 215, 0, 0.3);
 }
+
 .faction-stats span {
   font-size: 0.9rem;
   font-weight: 600;
   color: #FFD700;
 }
+
 .character-selection {
   max-width: 1400px;
   margin: 0 auto;
   text-align: center;
 }
+
 .selection-title {
   font-size: 2.5rem;
   color: #FFD700;
@@ -206,12 +236,14 @@ body, html {
   letter-spacing: 3px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
+
 .character-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
 }
+
 .character-option {
   background: rgba(255, 255, 255, 0.05);
   border: 3px solid rgba(255, 255, 255, 0.2);
@@ -221,22 +253,26 @@ body, html {
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
+
 .character-option:hover {
   transform: translateY(-5px);
   border-color: #FFD700;
   box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
 }
+
 .character-option.selected {
   border-color: #FFD700;
   background: rgba(255, 215, 0, 0.1);
   box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
 }
+
 .character-option h3 {
   font-size: 1.5rem;
   color: #FFD700;
   margin: 0 0 0.5rem;
   text-transform: uppercase;
 }
+
 .character-option .role {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.7);
@@ -244,13 +280,14 @@ body, html {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
 .character-option .abilities {
   font-size: 0.85rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.8);
   text-align: left;
 }
-/* Buttons */
+
 .btn-primary {
   background: linear-gradient(135deg, #FFD700, #FFA500);
   border: none;
@@ -266,24 +303,28 @@ body, html {
   transition: all 0.3s ease;
   box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
 }
+
 .btn-primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(255, 215, 0, 0.6);
 }
+
 .btn-primary:disabled {
   opacity: 0.5;
   cursor: not-allowed;
   transform: none;
 }
-/* Battle Arena */
+
 .battle-arena {
   max-width: 1400px;
   margin: 0 auto;
 }
+
 .battle-header {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .round-info h3 {
   font-size: 2rem;
   color: #FFD700;
@@ -291,7 +332,7 @@ body, html {
   letter-spacing: 3px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
-/* Battle Field */
+
 .battle-field {
   display: flex;
   justify-content: space-between;
@@ -299,10 +340,12 @@ body, html {
   gap: 2rem;
   margin-bottom: 2rem;
 }
+
 .combatant {
   flex: 1;
   max-width: 400px;
 }
+
 .character-portrait {
   width: 200px;
   height: 200px;
@@ -313,6 +356,7 @@ body, html {
   box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
   animation: float 3s ease-in-out infinite;
 }
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -321,6 +365,7 @@ body, html {
     transform: translateY(-10px);
   }
 }
+
 .character-stats {
   background: rgba(255, 255, 255, 0.05);
   padding: 1.5rem;
@@ -328,6 +373,7 @@ body, html {
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
+
 .character-stats h3 {
   font-size: 1.5rem;
   color: #FFD700;
@@ -335,6 +381,7 @@ body, html {
   text-align: center;
   text-transform: uppercase;
 }
+
 .health-bar, .energy-bar {
   position: relative;
   height: 30px;
@@ -344,18 +391,21 @@ body, html {
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
+
 .health-fill {
   height: 100%;
   background: linear-gradient(90deg, #FF4444, #FF6666);
   transition: width 0.5s ease;
   box-shadow: 0 0 20px rgba(255, 68, 68, 0.6);
 }
+
 .energy-fill {
   height: 100%;
   background: linear-gradient(90deg, #4488FF, #66AAFF);
   transition: width 0.5s ease;
   box-shadow: 0 0 20px rgba(68, 136, 255, 0.6);
 }
+
 .health-text, .energy-text {
   position: absolute;
   top: 50%;
@@ -366,6 +416,7 @@ body, html {
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
+
 .status-effects {
   display: flex;
   gap: 0.5rem;
@@ -373,6 +424,7 @@ body, html {
   margin-top: 1rem;
   min-height: 30px;
 }
+
 .status-effect {
   background: rgba(255, 215, 0, 0.2);
   padding: 0.3rem 0.8rem;
@@ -380,6 +432,7 @@ body, html {
   font-size: 0.8rem;
   border: 1px solid #FFD700;
 }
+
 .vs-indicator {
   font-size: 3rem;
   font-weight: 700;
@@ -387,7 +440,7 @@ body, html {
   text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
   animation: pulse 2s ease-in-out infinite;
 }
-/* Battle Log */
+
 .battle-log {
   background: rgba(0, 0, 0, 0.4);
   border: 2px solid rgba(255, 215, 0, 0.3);
@@ -398,16 +451,19 @@ body, html {
   margin-bottom: 2rem;
   backdrop-filter: blur(5px);
 }
+
 #battleMessages {
   font-size: 0.9rem;
   line-height: 1.8;
 }
+
 .battle-message {
   margin-bottom: 0.5rem;
   padding: 0.3rem 0.8rem;
   border-radius: 5px;
   animation: slideIn 0.3s ease;
 }
+
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -418,21 +474,25 @@ body, html {
     transform: translateX(0);
   }
 }
+
 .battle-message.player {
   color: #66FF66;
 }
+
 .battle-message.enemy {
   color: #FF6666;
 }
+
 .battle-message.system {
   color: #FFD700;
 }
-/* Action Panel */
+
 .action-panel {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
+
 .action-btn {
   background: rgba(255, 255, 255, 0.05);
   border: 3px solid rgba(255, 255, 255, 0.2);
@@ -450,39 +510,47 @@ body, html {
   gap: 0.5rem;
   backdrop-filter: blur(10px);
 }
+
 .action-icon {
   font-size: 2rem;
 }
+
 .action-cost {
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.6);
 }
+
 .action-btn:hover:not(:disabled) {
   transform: translateY(-5px);
   border-color: #FFD700;
   box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
 }
+
 .action-btn:disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
+
 .attack-btn:hover:not(:disabled) {
   border-color: #FF4444;
   box-shadow: 0 10px 30px rgba(255, 68, 68, 0.4);
 }
+
 .special-btn:hover:not(:disabled) {
   border-color: #FFD700;
   box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
 }
+
 .defend-btn:hover:not(:disabled) {
   border-color: #4488FF;
   box-shadow: 0 10px 30px rgba(68, 136, 255, 0.4);
 }
+
 .heal-btn:hover:not(:disabled) {
   border-color: #44FF44;
   box-shadow: 0 10px 30px rgba(68, 255, 68, 0.4);
 }
-/* Victory Screen */
+
 .result-content {
   max-width: 800px;
   margin: 0 auto;
@@ -493,6 +561,7 @@ body, html {
   backdrop-filter: blur(10px);
   border: 3px solid rgba(255, 215, 0, 0.5);
 }
+
 .result-title {
   font-size: 4rem;
   color: #FFD700;
@@ -502,11 +571,13 @@ body, html {
   text-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
   animation: pulse 2s ease-in-out infinite;
 }
+
 .result-message {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   line-height: 1.8;
 }
+
 .result-stats {
   background: rgba(0, 0, 0, 0.3);
   padding: 2rem;
@@ -514,54 +585,191 @@ body, html {
   margin-bottom: 2rem;
   text-align: left;
 }
+
 .result-stats p {
   font-size: 1.1rem;
   margin: 0.8rem 0;
   color: rgba(255, 255, 255, 0.9);
 }
+
 .result-stats strong {
   color: #FFD700;
 }
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .faction-selection {
     grid-template-columns: 1fr;
     max-width: 500px;
   }
+
   .battle-field {
     flex-direction: column;
   }
+
+  .combatant {
+    max-width: 100%;
+    width: 100%;
+  }
+
   .action-panel {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 768px) {
+  .game-container {
+    padding: 1rem;
+  }
+
   .game-title {
     font-size: 2.5rem;
+    letter-spacing: 2px;
   }
+
+  .game-subtitle {
+    font-size: 1.2rem;
+  }
+
   .nav-links {
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  .nav-links li a {
+    font-size: 0.9rem;
+  }
+
   .character-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
+
   .character-portrait {
     width: 150px;
     height: 150px;
   }
-  .action-panel {
-    grid-template-columns: 1fr;
+
+  .battle-field {
+    gap: 1rem;
   }
+
+  .vs-indicator {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+
+  .battle-header {
+    margin-bottom: 1rem;
+  }
+
+  .round-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .battle-log {
+    height: 120px;
+    font-size: 0.85rem;
+    padding: 1rem;
+  }
+
+  .action-panel {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .action-btn {
+    padding: 1rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .action-icon {
+    font-size: 1.5rem;
+  }
+
   .result-title {
     font-size: 2.5rem;
   }
 
-  #playerPortrait, #enemyPortrait {
-  width: 150px;       /* or whatever */
-  height: 150px;
-  background-size: cover;
-  background-position: center;
+  .result-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .result-message {
+    font-size: 1.2rem;
+  }
+
+  .result-stats {
+    padding: 1.5rem;
+  }
+
+  .result-stats p {
+    font-size: 1rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .game-container {
+    padding: 0.5rem;
+  }
+
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  .nav-links li a {
+    font-size: 0.8rem;
+  }
+
+  .game-title {
+    font-size: 2rem;
+  }
+
+  .character-stats {
+    padding: 1rem;
+  }
+
+  .character-stats h3 {
+    font-size: 1.2rem;
+  }
+
+  .health-bar, .energy-bar {
+    height: 25px;
+  }
+
+  .health-text, .energy-text {
+    font-size: 0.75rem;
+  }
+
+  .action-panel {
+    gap: 0.5rem;
+  }
+
+  .action-btn {
+    padding: 0.8rem 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  .action-cost {
+    font-size: 0.65rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+
+  .character-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .selection-title {
+    font-size: 1.8rem;
+  }
 }

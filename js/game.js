@@ -441,19 +441,16 @@ function performAction(action) {
 
   updateBattleUI();
 
-  // Kontrolli, kas vaenlane langes
   if (gameState.enemy.currentHealth <= 0) {
     setTimeout(() => endBattle(true), 1000);
     return;
   }
 
-  // Vaenlase käik
   setTimeout(() => {
     enemyTurn();
   }, 1500);
 }
 
-// --- Võitlusloogika ---
 function performAttack(attacker, defender, isEnemy) {
   const energyCost = 10;
   attacker.currentEnergy -= energyCost;
