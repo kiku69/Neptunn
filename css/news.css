@@ -33,12 +33,12 @@ body::before {
   padding: 2rem;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 15px;
-  border: 2px solid gold;
+  border: 2px solid rgb(106, 106, 250);
 }
 .newspaper-title {
   font-size: 3.5rem;
   font-weight: 700;
-  color: gold;
+  color: rgb(74, 152, 183);
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -53,7 +53,7 @@ body::before {
 }
 .header-divider {
   height: 3px;
-  background: linear-gradient(to right, transparent, gold, transparent);
+  background: linear-gradient(to right, transparent, rgb(95, 198, 230), transparent);
   margin-top: 1rem;
 }
 /* News Grid */
@@ -90,15 +90,15 @@ body::before {
   margin-bottom: 0.8rem;
 }
 .news-tag.breaking {
-  background: #dc3545;
+  background: #f218b1;
   color: white;
 }
 .news-tag.urgent {
-  background: #ff6b35;
+  background: #200bdb;
   color: white;
 }
 .news-tag.alert {
-  background: #ffc107;
+  background: #df93d8;
   color: #000;
 }
 .news-tag.update {
@@ -108,7 +108,7 @@ body::before {
 .news-title {
   font-size: 1.4rem;
   font-weight: 600;
-  color: gold;
+  color: rgb(102, 212, 232);
   margin: 0;
   line-height: 1.4;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
@@ -121,7 +121,7 @@ body::before {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 .read-more-btn {
-  background: linear-gradient(135deg, gold, #b8860b);
+  background: linear-gradient(135deg, rgb(255, 255, 255),);
   color: #000;
   border: none;
   padding: 0.7rem 1.5rem;
