@@ -9,6 +9,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Background Music Audio Element -->
+  <audio id="backgroundMusic" loop>
+    <source src="audio/Taloorid.mp3.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Music Control Button -->
+  <button id="musicToggle" class="music-toggle" aria-label="Toggle background music">
+    <svg class="music-icon play-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+    </svg>
+    <svg class="music-icon pause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+      <rect x="6" y="4" width="4" height="16"></rect>
+      <rect x="14" y="4" width="4" height="16"></rect>
+    </svg>
+  </button>
+
   <nav class="navbar">
         <button class="navbar-toggle" id="navbarToggle">
             <span class="hamburger"></span>
@@ -133,5 +150,6 @@
   <script src="js/thaloorid.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/voice.js"></script>
+  <script src="js/background-music.js"></script>
 </body>
 </html>
